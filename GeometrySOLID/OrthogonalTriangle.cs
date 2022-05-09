@@ -26,7 +26,7 @@ namespace GeometrySOLID
 
         public override double Area()
         {
-            return ((1 / 2) * Cathetus1 * Hypotenusen);
+            return ((0.5) * Cathetus1 * Hypotenusen);
         }
     }
 }

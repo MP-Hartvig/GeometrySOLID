@@ -9,33 +9,32 @@ namespace GeometrySOLID
     class Trapez : Square
     {
         private int LongSide;
-        private int ShortSide;
         private int EqualSide;
 
-        public Trapez(int longSide, int shortSide) : base(longSide)
+        public Trapez(int longSide, int equalSide) : base(longSide)
         {
             LongSide = longSide;
-            ShortSide = shortSide;
+            EqualSide = equalSide;
         }
 
         public override double Perimiter()
         {
             double height = HeightCalculator();
 
-            return ((1 / 2) * height * ((LongSide * 2) + (ShortSide * 2)));
+            return ((0.5) * height * ((LongSide * 2) + (EqualSide * 2)));
         }
 
         public override double Area()
         {
             
-            return ((LongSide * 2) + (ShortSide * 2));
+            return ((LongSide * 2) + (EqualSide * 2));
         }
 
         private double HeightCalculator()
         {
-            double s = (LongSide + EqualSide) - (ShortSide + EqualSide) / 2;
+            double s = (LongSide + EqualSide) - (EqualSide + EqualSide) / 2;
 
-            return (2 / (LongSide - ShortSide) * Math.Sqrt(s * (s - LongSide + ShortSide) * (s - EqualSide) * (s - EqualSide)));
+            return (2 / (LongSide - EqualSide) * Math.Sqrt(s * (s - LongSide + EqualSide) * (s - EqualSide) * (s - EqualSide)));
         }
     }
 }
