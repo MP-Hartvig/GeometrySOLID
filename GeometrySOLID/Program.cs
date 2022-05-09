@@ -49,29 +49,36 @@ namespace GeometrySOLID
             Parallelogram parallelogram = new Parallelogram(longSide, shortSide, height, tilt);
             OrthogonalTriangle triangle = new OrthogonalTriangle(longSide, cathetus1, cathetus2);
 
-            List<object> list = new List<object>();
+            List<Square> list = new List<Square>();
 
-            foreach (var item in list)
+            list.Add(square);
+            list.Add(trapez);
+            list.Add(rectangle);
+            list.Add(parallelogram);
+            list.Add(triangle);
+
+            for (int i = 0; i < list.Count; i++)
             {
-                
+                Console.WriteLine("Perimiter: " + list[i].Perimiter());
+                Console.WriteLine("Area: " + list[i].Area());
             }
 
-            Console.WriteLine($"Long side: {longSide}\nShort side: {shortSide}\nHeight: {height}");
+            //Console.WriteLine($"Long side: {longSide}\nShort side: {shortSide}\nHeight: {height}");
 
-            Console.WriteLine("Square perimiter: " + square.Perimiter());
-            Console.WriteLine("Square area: " + square.Area());
+            //Console.WriteLine("Square perimiter: " + square.Perimiter());
+            //Console.WriteLine("Square area: " + square.Area());
 
-            Console.WriteLine("Trapez perimiter: " + trapez.Perimiter()); // Logic needs rework
-            Console.WriteLine("Trapez area: " + trapez.Area());
+            //Console.WriteLine("Trapez perimiter: " + trapez.Perimiter()); // Logic needs rework
+            //Console.WriteLine("Trapez area: " + trapez.Area());
 
-            Console.WriteLine("Rectangle perimiter: " + rectangle.Perimiter());
-            Console.WriteLine("Rectangle area: " + rectangle.Area());
+            //Console.WriteLine("Rectangle perimiter: " + rectangle.Perimiter());
+            //Console.WriteLine("Rectangle area: " + rectangle.Area());
 
-            Console.WriteLine("Parallelogram perimiter: " + parallelogram.Perimiter());
-            Console.WriteLine("Parallelogram area: " + parallelogram.Area());
+            //Console.WriteLine("Parallelogram perimiter: " + parallelogram.Perimiter());
+            //Console.WriteLine("Parallelogram area: " + parallelogram.Area());
 
-            Console.WriteLine("Orthogonal perimiter: " + triangle.Perimiter());
-            Console.WriteLine("Orthogonal area: " + triangle.Area()); // Logic needs rework
+            //Console.WriteLine("Orthogonal perimiter: " + triangle.Perimiter());
+            //Console.WriteLine("Orthogonal area: " + triangle.Area()); // Logic needs rework
 
             Console.ReadLine();
         }
