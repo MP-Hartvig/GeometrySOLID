@@ -8,11 +8,11 @@ namespace GeometrySOLID
 {
     class OrthogonalTriangle : Square
     {
-        private int Hypotenusen;
-        private int Cathetus1;
-        private int Cathetus2;
+        private double Hypotenusen;
+        private double Cathetus1;
+        private double Cathetus2;
 
-        public OrthogonalTriangle(int hypotenusen, int cathetus1, int cathetus2) : base(hypotenusen)
+        public OrthogonalTriangle(double hypotenusen, double cathetus1, double cathetus2) : base(hypotenusen)
         {
             Hypotenusen = hypotenusen;
             Cathetus1 = cathetus1;

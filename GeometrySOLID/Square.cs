@@ -8,15 +8,9 @@ namespace GeometrySOLID
 {
     public class Square
     {
-        private int sideLength;
+        private double sideLength;
 
-        public int SideLength
-        {
-            get { return sideLength; }
-            set { sideLength = value; }
-        }
-
-        public Square(int length)
+        public Square(double length)
         {
             sideLength = length;
         }

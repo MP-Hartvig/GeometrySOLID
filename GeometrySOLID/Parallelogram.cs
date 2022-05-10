@@ -8,12 +8,12 @@ namespace GeometrySOLID
 {
     class Parallelogram : Square
     {
-        private int LongSide;
-        private int ShortSide;
-        private int Height;
-        private int Tilt;
+        private double LongSide;
+        private double ShortSide;
+        private double Height;
+        private double Tilt;
 
-        public Parallelogram(int longSide, int shortSide, int height, int tilt) : base(longSide)
+        public Parallelogram(double longSide, double shortSide, double height, double tilt) : base(longSide)
         {
             LongSide = longSide;
             ShortSide = shortSide;

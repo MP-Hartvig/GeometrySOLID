@@ -8,16 +8,16 @@ namespace GeometrySOLID
 {
     class Trapez : Square
     {
-        private int LongSide;
-        private int EqualSide;
+        private double LongSide;
+        private double EqualSide;
 
-        public Trapez(int longSide, int equalSide) : base(longSide)
+        public Trapez(double longSide, double equalSide) : base(longSide)
         {
             LongSide = longSide;
             EqualSide = equalSide;
         }
 
-        public override double Perimiter()
+        public override double Perimiter() // Something here doesn't work
         {
             double height = HeightCalculator();
 
@@ -25,16 +25,15 @@ namespace GeometrySOLID
         }
 
         public override double Area()
-        {
-            
+        {            
             return ((LongSide * 2) + (EqualSide * 2));
         }
 
-        private double HeightCalculator()
+        private double HeightCalculator() // Might be this calculation which is wrong
         {
-            double s = (LongSide + EqualSide) - (EqualSide + EqualSide) / 2;
+            double s = ((LongSide + EqualSide) - (EqualSide + LongSide)) / 2;
 
-            return (2 / (LongSide - EqualSide) * Math.Sqrt(s * (s - LongSide + EqualSide) * (s - EqualSide) * (s - EqualSide)));
+            return ((2 / (LongSide - EqualSide)) * Math.Sqrt((s * (s - LongSide + EqualSide) * (s - EqualSide) * (s - EqualSide))));
         }
     }
 }

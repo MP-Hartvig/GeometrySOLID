@@ -10,38 +10,29 @@ namespace GeometrySOLID
     {
         static void Main(string[] args)
         {
-            //Random random = new Random();
-
-            //int longSide = random.Next(10, 21);
-            //int shortSide = random.Next(1, 10);
-            //int cathetus1 = random.Next(5, 10);
-            //int cathetus2 = random.Next(5, 10);
-            //int height = random.Next(3, 7);
-            //int tilt = random.Next(20, 50);
-
             Console.Write("Write a number between 10 and 15: ");
             string firstInput = Console.ReadLine();
-            int longSide = Convert.ToInt32(firstInput);
+            double longSide = Convert.ToDouble(firstInput);
 
             Console.Write("Write a number between 5 and 10: ");
             string secondInput = Console.ReadLine();
-            int shortSide = Convert.ToInt32(secondInput);
+            double shortSide = Convert.ToDouble(secondInput);
 
             Console.Write("Write a number between 8 and 12: ");
             string thirdInput = Console.ReadLine();
-            int cathetus1 = Convert.ToInt32(thirdInput);
+            double cathetus1 = Convert.ToDouble(thirdInput);
 
             Console.Write("Write a number between 8 and 12: ");
             string fourthInput = Console.ReadLine();
-            int cathetus2 = Convert.ToInt32(fourthInput);
+            double cathetus2 = Convert.ToDouble(fourthInput);
 
             Console.Write("Write a number between 5 and 15: ");
             string fifthInput = Console.ReadLine();
-            int height = Convert.ToInt32(fifthInput);
+            double height = Convert.ToDouble(fifthInput);
 
             Console.Write("Write a number between 20 and 40: ");
             string sixthInput = Console.ReadLine();
-            int tilt = Convert.ToInt32(sixthInput);
+            double tilt = Convert.ToDouble(sixthInput);
 
             Square square = new Square(longSide);
             Trapez trapez = new Trapez(longSide, shortSide);
@@ -62,6 +53,15 @@ namespace GeometrySOLID
                 Console.WriteLine("Perimiter: " + list[i].Perimiter());
                 Console.WriteLine("Area: " + list[i].Area());
             }
+
+            //Random random = new Random();
+
+            //int longSide = random.Next(10, 21);
+            //int shortSide = random.Next(1, 10);
+            //int cathetus1 = random.Next(5, 10);
+            //int cathetus2 = random.Next(5, 10);
+            //int height = random.Next(3, 7);
+            //int tilt = random.Next(20, 50);
 
             //Console.WriteLine($"Long side: {longSide}\nShort side: {shortSide}\nHeight: {height}");
 

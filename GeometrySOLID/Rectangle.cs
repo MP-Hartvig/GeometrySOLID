@@ -8,10 +8,10 @@ namespace GeometrySOLID
 {
     class Rectangle : Square
     {
-        private int ShortSide;
-        private int LongSide;
+        private double ShortSide;
+        private double LongSide;
 
-        public Rectangle(int longSide, int shortSide) : base(longSide)
+        public Rectangle(double longSide, double shortSide) : base(longSide)
         {
             ShortSide = shortSide;
             LongSide = longSide;
